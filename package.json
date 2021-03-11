@@ -1,6 +1,6 @@
 {
   "name": "phaser-project-template",
-  "version": "3.50.1",
+  "version": "3.52.0",
   "description": "Phaser 3 starter template with TypeScript and webpack.",
   "homepage": "https://github.com/yandeu/phaser-project-template#readme",
   "main": "index.js",
@@ -8,7 +8,9 @@
     "start": "webpack serve --config webpack/webpack.dev.js",
     "build": "rimraf dist && webpack --config webpack/webpack.prod.js",
     "bundle": "npm run build",
-    "serve": "serve dist"
+    "serve": "serve dist",
+    "format": "prettier --write src/scripts/**",
+    "format:check": "prettier --check src/scripts/**"
   },
   "keywords": [
     "Phaser",
@@ -33,12 +35,13 @@
     "author": "Yannick Deubel (https://github.com/yandeu)"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12"
   },
   "license": "MIT",
   "devDependencies": {
-    "copy-webpack-plugin": "^7.0.0",
-    "html-webpack-plugin": "^4.5.0",
+    "@yandeu/prettier-config": "^0.0.1",
+    "copy-webpack-plugin": "^8.0.0",
+    "html-webpack-plugin": "^5.2.0",
     "javascript-obfuscator": "^2.9.5",
     "rimraf": "^3.0.2",
     "serve": "^11.3.2",
@@ -52,6 +55,6 @@
     "workbox-webpack-plugin": "^6.0.2"
   },
   "dependencies": {
-    "phaser": "~3.50.1"
+    "phaser": "~3.52.0"
   }
 }
